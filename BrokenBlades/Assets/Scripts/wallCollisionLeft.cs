@@ -19,7 +19,7 @@ public class wallCollisionLeft : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Ground")
+        if (collision.collider.tag == "Walls")
         {
             player.GetComponent<player_movement>().isWalledLeft = true;
         }
@@ -27,7 +27,7 @@ public class wallCollisionLeft : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Ground")
+        if (collision.collider.tag == "Walls")
         {
             player.GetComponent<player_movement>().isWalledLeft = false;
         }
